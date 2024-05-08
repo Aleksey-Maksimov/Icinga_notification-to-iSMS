@@ -3,7 +3,8 @@
 **notification-to-isms** - Script for SMS notifications for **Icinga** via **MultiTech MultiModem iSMS Server**
  
 Tested on:
-- Debian GNU/Linux 10.9 (Buster), Icinga r2.8.8
+- Debian GNU/Linux 10.9 (Buster) with Icinga r2.8.8
+- Debian GNU/Linux 12.5 (Bookworm) with Icinga r2.14.2-1
 - Multi-Tech MultiModem iSMS Server SF800-G with firmware 1.51.28
 
 The latest version of the iSMS firmware can be downloaded from the link: 
@@ -82,5 +83,7 @@ Testing for Service mode:
 ```
 
 Icinga Director integration manual (in Russian):
+
+[Отсылка SMS оповещений в Icinga с помощью MultiTech MultiModem iSMS SF800-G](https://blog.it-kb.ru/2024/05/08/icinga-notification-plugin-for-sending-sms-notifications-via-web-api-of-the-multitech-multimodem-isms-sf800-g/)
 
 [Развёртывание и настройка Icinga 2 на Debian 8.6. Часть 14. Настройка SMS оповещений в Icinga Director 1.3](https://blog.it-kb.ru/2017/09/15/deploy-and-configure-icinga-2-on-debian-8-part-14-icinga-director-1-3-and-sms-notifications-with-plugin-command-and-custom-shell-script/)
