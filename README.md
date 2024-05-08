@@ -24,30 +24,30 @@ Options:
 $ ./notification-to-isms.sh [OPTIONS]
 
 Option   GNU long option         Meaning
-------   ---------------	       -------
+------   ---------------	 -------
  -M      --plugin-mode           Plugin mode. Static value. Possible values: host-mode|service-mode
- -a      --notification-type	   Icinga Notification type (for example, from a variable \$notification.type\$)
- -b      --notification-autor	   Icinga Notification autor (for example, from a variable \$notification.author\$)
+ -a      --notification-type	 Icinga Notification type (for example, from a variable \$notification.type\$)
+ -b      --notification-autor	 Icinga Notification autor (for example, from a variable \$notification.author\$)
  -c      --notification-comment  Icinga Notification comment (for example, from a variable \$notification.comment\$)
- -d      --long-datetime	       Icinga Notification date and time (for example, from a variable \$icinga.long_date_time\$)
- -e      --host-displayname	     Icinga Host name (for example, from a variable \$host.display_name\$)
- -f      --host-alias		         Icinga Host alias (for example, from a variable \$host.name\$)
- -g      --host-address		       Icinga Host address (for example, from a variable \$address\$)
- -h      --host-state		         Icinga Host last state (for example, from a variable \$host.state\$)
- -i      --host-output		       Icinga Host monitoring plugin output (for example, from a variable \$host.output\$)
+ -d      --long-datetime	 Icinga Notification date and time (for example, from a variable \$icinga.long_date_time\$)
+ -e      --host-displayname	 Icinga Host name (for example, from a variable \$host.display_name\$)
+ -f      --host-alias		 Icinga Host alias (for example, from a variable \$host.name\$)
+ -g      --host-address		 Icinga Host address (for example, from a variable \$address\$)
+ -h      --host-state		 Icinga Host last state (for example, from a variable \$host.state\$)
+ -i      --host-output		 Icinga Host monitoring plugin output (for example, from a variable \$host.output\$)
  -j      --service-displayname   Icinga Service display name (for example, from a variable \$service.display_name\$)
- -k      --service-desc		       Icinga Service alias (for example, from a variable \$service.name\$)
- -l      --service-state	       Icinga Service last state (for example, from a variable \$service.state\$ )
- -m      --service-output	       Icinga Service monitoring plugin output (for example, from a variable \$service.output\$)
+ -k      --service-desc		 Icinga Service alias (for example, from a variable \$service.name\$)
+ -l      --service-state	 Icinga Service last state (for example, from a variable \$service.state\$ )
+ -m      --service-output	 Icinga Service monitoring plugin output (for example, from a variable \$service.output\$)
  -z      --item-comment          Additional item comment with custom variable from Host or Service (for example, from a variable \$host.Notification_Comment\$)
- -n      --sms-to		             Email address for "To:" header (for example, from a variable \$user.pager\$)
- -S	     --isms-server		       iSMS Server address in format "host:port"
- -U	     --isms-user		         iSMS Server user login
- -P	     --isms-password	       iSMS Server user password
- -Q	     --isms-priority	       SMS priority in iSMS queue. Possible values: 1|2|3. Default value:2. 1 - Low, 2 - Normal, 3 - High. 
- -N	     --isms-modem-num	       Number of modem in iSMS. Possible values: 0-8 (0-4 for SF400, 0-8 for SF800). 0 for any modem (Send API job is distributed using all the available modems) 
+ -n      --sms-to		 Email address for "To:" header (for example, from a variable \$user.pager\$)
+ -S	 --isms-server		 iSMS Server address in format "host:port"
+ -U	 --isms-user		 iSMS Server user login
+ -P	 --isms-password	 iSMS Server user password
+ -Q	 --isms-priority	 SMS priority in iSMS queue. Possible values: 1|2|3. Default value:2. 1 - Low, 2 - Normal, 3 - High. 
+ -N	 --isms-modem-num	 Number of modem in iSMS. Possible values: 0-8 (0-4 for SF400, 0-8 for SF800). 0 for any modem (Send API job is distributed using all the available modems) 
  -q      --help                  Show this message
- -v      --version		           Print version information and exit
+ -v      --version		 Print version information and exit
 
 ```
 
