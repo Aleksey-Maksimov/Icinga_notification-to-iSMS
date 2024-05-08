@@ -4,8 +4,8 @@
 # Aleksey Maksimov <aleksey.maksimov@it-kb.ru>
 #
 # Tested on:
-# - Debian GNU/Linux 10.9 (Buster)
-# - Icinga r2.8.8
+# - Debian GNU/Linux 10.9 (Buster) with Icinga r2.8.8
+# - Debian GNU/Linux 12.5 (Bookworm) with Icinga r2.14.2-1
 # - Multi-Tech MultiModem iSMS Server SF800-G with firmware 1.51.28
 # The latest version of the iSMS firmware can be downloaded from the link: 
 # ftp://ftp.multitech.com/engineering/unofficial-releases/iSMS%20(Formerly%20SMSFinder)/Firmware/
@@ -18,9 +18,10 @@
 # Put here /etc/icinga2/scripts/notification-to-isms.sh
 #
 # 2021.04.23 - Initial version
+# 2024.05.08 - Debian 12 Bookworm compatibility tested
 #
 PLUGIN_NAME="Plugin for SMS notifications for Icinga via Multi-Tech MultiModem Intelligent SMS Server"
-PLUGIN_VERSION="2021.04.23"
+PLUGIN_VERSION="2024.05.08"
 PRINTINFO=`printf "\n%s, version %s\n \n" "$PLUGIN_NAME" "$PLUGIN_VERSION"`
 #
 #
@@ -45,7 +46,7 @@ Option   GNU long option         Meaning
  -l      --service-state	 Icinga Service last state (for example, from a variable \$service.state\$ )
  -m      --service-output	 Icinga Service monitoring plugin output (for example, from a variable \$service.output\$)
  -z      --item-comment          Additional item comment with custom variable from Host or Service (for example, from a variable \$host.Notification_Comment\$)
- -n      --sms-to		 Email address for "To:" header (for example, from a variable \$user.pager\$)
+ -n      --sms-to		 SMS recipient phone number (for example, from a variable \$user.pager\$)
  -S	 --isms-server		 iSMS Server address in format "host:port"
  -U	 --isms-user		 iSMS Server user login
  -P	 --isms-password	 iSMS Server user password
@@ -248,4 +249,4 @@ fi
 # Send sms to iSMS Server
 #
 FULLURL=$( echo "http://$ISMSSRV/sendmsg?user=$ISMSUSR&passwd=$ISMSPWD&cat=1&enc=$ISMSENC&priority=$ISMSPRIO&modem=$ISMSMODEM&to=$SMSTO&text=$ISMSTEXT" )
-wget -q $FULLURL
+wget --no-proxy -q $FULLURL
